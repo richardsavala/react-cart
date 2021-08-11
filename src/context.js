@@ -28,6 +28,9 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "INCREASE", payload: id });
   };
 
+  const decrease = (id) => {
+    dispatch({ type: "DECREASE", payload: id });
+  };
   return (
     <AppContext.Provider
       value={{
@@ -35,6 +38,7 @@ const AppProvider = ({ children }) => {
         clearCart,
         remove,
         increase,
+        decrease,
       }}
     >
       {children}
